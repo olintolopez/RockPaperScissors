@@ -49,23 +49,6 @@ h1{
     color: #fff;
 }
 
-@media only screen and (max-width:720px) {
-
-    h1{
-        font-size:calc(3vw);
-    }   
-
-}
-
-
-@media only screen and (max-width:500px) {
-
-    h1{
-        font-size:calc(3.8vw);
-    }   
-
-}
-
 .container__msj{
     padding: 20px;
     text-align: center;
@@ -136,7 +119,7 @@ h1{
 
 .play_win
 {
-    background:#3CCF1A;
+    background:#446d4c;
     color: #fff;
 }
 
@@ -229,7 +212,7 @@ svg path:hover{
 }
 
 .green{
-    border: 25px solid #3CCF1A;
+    border: 25px solid #446d4c;
     box-shadow: 0 0 10px #4BC62E;
     border-radius: 50%;
     fill: #fff;
@@ -269,4 +252,45 @@ footer{
 footer a{
     color: black;
     text-decoration: none;
+}
+
+@media only screen and (max-width:720px) {
+
+    h1{
+        font-size:calc(3vw);
+    }
+    
+    .green{
+        border: 8px solid #446d4c;
+    }
+    
+    .red{
+        border: 8px solid #D30E0E;
+      }
+    
+    .black{
+        border: 8px solid #000;
+      }
+    
+
+}
+
+
+@media only screen and (max-width:500px) {
+
+    h1{
+        font-size:calc(3.8vw);
+    }  
+    .green{
+        border: 5px solid #446d4c;
+    }
+    
+    .red{
+        border: 5px solid #D30E0E;
+      }
+    
+    .black{
+        border: 5px solid #000;
+      } 
+
 }
