@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock - Paper - Scissors!</title>
+    <link rel="shortcut icon" href="assets/img/odin.png" type="image/x-icon">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
+   
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Let's play Rock - Paper - Scissors!</h1>
+        </div>
+
+        <div class="container__msj">
+            Select your weapon. <br>The first to reach 5 points wins the game!!
+       </div>
+
+        <div class="score">
+            <div class="title_score">
+                score
+            </div>
+            <div class="user-icon badge">
+                <i class="fa fa-user"></i>
+                <span>User</span>
+            </div>
+            <div class="comp-icon badge">
+                <i class="fas fa-desktop "></i>
+                <span>Comp.</span>
+            </div>
+            <span id="user__score">0</span> :
+            <span id="comp__score">0</span>
+        </div>
+   
+       <div class="show_result">
+       
+           <img id="user_img" src="assets/img/odin_02.png">
+            
+   
+           <div id="versus">
+               Versus
+           </div>
+        
+           <img id="comp_img" src="assets/img/desktop.png">   
+   
+       </div>
+   
+       <div class="group_btns">
+           <button class="rockBtn" id="rockBtn">
+               <img class="imgSvg" id="rockSvg" src="assets/img/rock.svg" alt="">
+           </button>
+           <button class="paperBtn" id="paperBtn">
+               <img class="imgSvg" id="paperSvg" src="assets/img/paper.svg" alt="">
+           </button>
+           <button class="scissorsBtn" id="scissorsBtn">
+               <img class="imgSvg" id="scissorsSvg" src="assets/img/scissors.svg" alt="">
+           </button>
+       </div>
+       
+       <div class="result__msj hidden">
+           Choose your option. The first to 5 points wins!
+       </div>
+       
+       <button class="btnPlayAgain" disabled>
+           Play again
+       </button>
+
+       <footer>Made by <a id="author" target="_blank" href="#">Olinto Lopez</a></footer>
+    </div>
+    
+
+    <script src="assets/js/app.js"></script>
+</body>
+</html>
