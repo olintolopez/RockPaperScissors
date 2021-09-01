@@ -1,0 +1,272 @@
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200;400&family=Montserrat&family=Open+Sans&family=Roboto&family=Yesteryear&display=swap');
+*{
+    margin: o;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+   font-family: 'Montserrat', sans-serif;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.container{
+    width: 80%;
+    max-width: 720px;
+    min-width: 360px;
+    height: 100vh;
+    max-height:720px ;
+    margin: 0 auto;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    border: 20px solid black;
+    border-top: 20px solid black;
+    border-radius: 50px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+    
+}
+
+.header{
+    background:#446d4c;
+    width: 100%;
+    border-radius: 25px 25px 0 0 ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+}
+
+
+h1{
+    font-size: calc(2.2vw);;
+    text-align: center;
+    padding: 20px;
+    color: #fff;
+}
+
+@media only screen and (max-width:720px) {
+
+    h1{
+        font-size:calc(3vw);
+    }   
+
+}
+
+
+@media only screen and (max-width:500px) {
+
+    h1{
+        font-size:calc(3.8vw);
+    }   
+
+}
+
+.container__msj{
+    padding: 20px;
+    text-align: center;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.show_result{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.show_result img{
+    width: 10%;
+}
+
+.show_result #versus{
+    margin-left: 20px;
+    margin-right: 20px;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+
+.score{
+    border: 3px solid #000;
+    margin: 20px auto;
+    width: 200px;
+    height: 90px;
+    color: #000;
+    font-size: 20px;
+    font-weight: 700;
+    border-radius: 5px;
+    text-align: center;
+    padding: 15px 20px;
+    position: relative;
+  }
+
+.title_score{
+    position: absolute;
+    top:-25px;
+    left: 50%;
+    transform:translateX(-50%);
+}
+
+.badge
+{
+    background: #fff;
+    font-size: 14px;
+    border: 2px solid #000;
+    border-radius: 50%;
+    padding: 1px 2px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 55px;
+    height: 55px;
+}
+
+.user-icon
+{
+    position: absolute;
+    top: auto;
+    left: -30px;
+}
+
+.play_win
+{
+    background:#3CCF1A;
+    color: #fff;
+}
+
+.play_lost
+{
+    background:#D30E0E;
+    color: #fff;
+}
+
+.play_tie
+{
+    background:#000;
+    color: #fff;
+}
+
+.msjPlay
+{
+    text-align: center;
+    font-weight: bold;
+}
+.comp-icon{
+    position: absolute;
+    top: auto;
+    right: -30px;
+}
+#user-score, #comp-score{
+    padding: 5px;
+    font-size: 30px;
+  }
+
+.group_btns{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    width: 50%;
+}
+
+.group_btns button{
+    width: 30%;
+    border-radius: 50%;
+    margin-right: 5px;
+}
+
+.group_btns button > img{
+    width: 100%;
+}
+
+.group_btns button:hover{
+    cursor: pointer;
+    box-shadow: 0 0 30px #BFB6B6;
+}
+
+/* img.imgSvg:hover{
+    fill:#fff;
+    filter: invert(1);
+} */
+
+
+svg path:hover{
+    fill: #fff !important;
+}
+
+.btnPlayAgain{
+
+    background: #e1e1e1;
+    color: #333;
+    border:1px solid #000;
+    padding: 10px 30px;
+    letter-spacing: 0.5em;
+    font-size: 12px;
+    text-transform: uppercase;
+
+}
+.playAgain{
+    cursor: pointer;
+}
+
+.playAgain:hover{
+    background: #446d4c;
+    color: #fff;
+}
+
+#continue {
+    color: rgb(192, 47, 47);
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+.green{
+    border: 25px solid #3CCF1A;
+    box-shadow: 0 0 10px #4BC62E;
+    border-radius: 50%;
+    fill: #fff;
+}
+
+.red{
+    border: 25px solid #D30E0E;
+    box-shadow: 0 0 10px #CC2A2A;
+    border-radius: 50%;
+    fill: #fff;
+  }
+
+.black{
+    border: 25px solid #000;
+    box-shadow: 0 0 10px #BFB6B6;
+    border-radius: 50%;
+    fill: #fff;
+  }
+  
+.result__msj{
+    text-align: center;
+    font-weight: bold;
+}
+
+.resetGame{
+    color: red;
+    font-weight: bold;
+}
+
+footer{
+    width: 100%;
+    text-align: center;
+    padding: 10px;border-top: 2px solid black;
+    font-size: 12px;
+}
+
+footer a{
+    color: black;
+    text-decoration: none;
+}
