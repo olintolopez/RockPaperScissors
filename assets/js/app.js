@@ -147,7 +147,7 @@ function userWin(opUser, opComp)
         userIcon_div.classList.remove('play_win');
         pcChoice_div.classList.remove("red");
         compIcon_div.classList.remove('play_lost');
-        result__msj.innerHTML= "You won the Game! Congratulations!.<br>"+
+        result__msj.innerHTML= "You win the Game! Congratulations!.<br>"+
                              "<font class='resetGame'>If you want to play more, press the button!</font> ";
         playAgain.disabled=false;
         playAgain.classList.add('playAgain');
