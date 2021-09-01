@@ -17,15 +17,15 @@ const paperBtn       = document.querySelector('.paperBtn');
 const scissorsBtn    = document.querySelector('.scissorsBtn');
 const playAgain      = document.querySelector('.btnPlayAgain');
 const rocksvg        = document.querySelector('#rockSvg');
-const stringUser     = "(USER)".fontsize(2);
-const stringComp     = "(COMPUTER)".fontsize(2);
+const stringUser     = "USER";
+const stringComp     = "COMPUTER";
 const author         = document.querySelector('#author');
 
 
 /** 
     FUNCTION THAT CALCULATE THE MACHINE OPTION RANDOM 
 **/
-function computerOption() 
+function computerPlay() 
 {
    
   const options    = ['r','p','t'];
@@ -63,11 +63,11 @@ function changeToWord(option)
 {
 
     if (option == 'r'){
-      return "Stone <i class='far fa-hand-rock'></i>";
+      return "(Stone <i class='far fa-hand-rock'></i>)";
     }else if (option == 'p') {
-      return "Paper <i class='far fa-hand-paper'></i>";
+      return "(Paper <i class='far fa-hand-paper'></i>)";
     }else {
-      return "Scissors <i class='far fa-hand-scissors'></i>";
+      return "(Scissors <i class='far fa-hand-scissors'></i>)";
     }
 
 }
@@ -126,8 +126,8 @@ function userWin(opUser, opComp)
     userScore++;
     user_score.innerHTML= userScore;
     result__msj.classList.remove('hidden');
-    result__msj.innerHTML= changeToWord(opUser) + stringUser+" Win to " + 
-                              changeToWord(opComp)+stringComp;
+    result__msj.innerHTML= stringUser + changeToWord(opUser)+" Win to "  +  
+                          stringComp + changeToWord(opComp);
     const op_user = opLetter(opUser);                              
     const userChoice_div= document.getElementById(op_user);
     const userIcon_div= document.querySelector('.user-icon');
@@ -178,8 +178,8 @@ function computerWin(opUser, opComp)
     compScore++;
     comp_score.innerHTML= compScore;
     result__msj.classList.remove('hidden');
-    result__msj.innerHTML= changeToWord(opComp)+stringComp+" win to "
-                          + changeToWord(opUser)+stringUser;
+    result__msj.innerHTML= stringComp + changeToWord(opComp) +" win to "
+                          + stringUser +changeToWord(opUser);
     const op_user = opLetter(opUser);
     const userChoice_div= document.getElementById(op_user);
     const userIcon_div= document.querySelector('.user-icon');
@@ -250,7 +250,7 @@ function isTie(opUser)
   
 
 function game(option){
-  const optionPc= computerOption();
+  const optionPc= computerPlay();
   const optionUser= option;
   switch (optionUser+optionPc) {
     case 'rt':
@@ -271,11 +271,6 @@ function game(option){
   }
   lock_buttons();
 }
-
-author.addEventListener('click',(e)=>{
-    e.preventDefault();
-})
-
 
 function main(){
   rockBtn.addEventListener('click', () => game("r"));
