@@ -35,7 +35,9 @@ function computerPlay()
 
 }
 
-
+/** 
+    HELPER FUNCTION TO TRANSLATE OPTIONLETTER TO SVG OPTION  
+**/
 function opLetter(option)
 {
   
@@ -99,7 +101,7 @@ function unlock_buttons()
 }
 
 /** 
-    RESET THE GAME  
+   FUNCTION THAT RESET THE GAME  
 **/
 function resetGame()
 {
@@ -161,7 +163,6 @@ function userWin(opUser, opComp)
         pcChoice_div.classList.remove("red");
         compIcon_div.classList.remove('play_lost');
         result__msj.classList.add('hidden');
-        rockBtn.disabled = false;
         versus.innerHTML='Versus';
         
       }, 4000);
@@ -248,8 +249,11 @@ function isTie(opUser)
 
 }
   
-
-function game(option){
+/** 
+    FUNCTION THAT SIMULATE THE GAME  
+**/
+function game(option)
+{
   const optionPc= computerPlay();
   const optionUser= option;
   switch (optionUser+optionPc) {
@@ -272,9 +276,17 @@ function game(option){
   lock_buttons();
 }
 
-function main(){
+/** 
+    THIS IS THE MAIN FUNCTION THAT SIMULATE THE GAME  
+**/
+function main()
+{
   rockBtn.addEventListener('click', () => game("r"));
   paperBtn.addEventListener('click', () => game("p"));
   scissorsBtn.addEventListener('click', () => game("t"));
 }
+
+/** 
+    THE FUNCTION THAT INITIALIZES THE GAME IS INVOKED  
+**/
 main();
